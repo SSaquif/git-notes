@@ -23,9 +23,9 @@ All things git
     - [Discarding local changes](#discarding-local-changes)
     - [Restoring an earlier version of a file](#restoring-an-earlier-version-of-a-file)
   - [Sumodules](#sumodules)
-  - [Adding a Submodule](#adding-a-submodule)
-  - [Updating a Submoudle](#updating-a-submoudle)
-  - [Removing a Ssubmodule](#removing-a-ssubmodule)
+    - [Adding a Submodule](#adding-a-submodule)
+    - [Updating a Submoudle](#updating-a-submoudle)
+    - [Removing a submodule](#removing-a-submodule)
 
 <!-- tocstop -->
 
@@ -127,16 +127,23 @@ git restore --source=HEAD~2 file.js
 
 ## Sumodules
 
-## Adding a Submodule
+### Adding a Submodule
 
 ```bash
 git submodule add shh/url-link-to-repo
 ```
 
-## Updating a Submoudle
+### Updating a Submoudle
 
-Need to learn This
+Or you can do update with remote swtich
 
-## Removing a Ssubmodule
+```bash
+git submodule update --remote                         # update all
+git submodule update --remote <path to the submodule> # path can be found in .gitmodules file
+```
+
+Note: (Need to verify this). Apparently another way is, you can go into the individual submodule from the parent/super repo and do a regular pull (fetch and merge) in those modules.
+
+### Removing a submodule
 
 Need to learn This
