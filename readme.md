@@ -135,9 +135,12 @@ git submodule add shh/url-link-to-repo
 
 ### Updating a Submoudle
 
-Or you can do update with remote swtich
+You can do update with remote switch
+
+[Why we needd --remote](https://stackoverflow.com/questions/47470271/what-does-remote-actually-do-in-git-submodule-update-remote), if we want to pull master
 
 ```bash
+git submodule update                                  # Update using the revison being tracked
 git submodule update --remote                         # update all
 git submodule update --remote <path to the submodule> # path can be found in .gitmodules file
 ```
@@ -146,4 +149,16 @@ Note: (Need to verify this). Apparently another way is, you can go into the indi
 
 ### Removing a submodule
 
-Need to learn This
+[Video Tutorial](https://www.youtube.com/watch?v=6pGxk0B_Ino)
+
+There are a few steps to it, see below
+
+```bash
+# Step 1: git remove
+git rm <module_name>
+# Step 2: remove form the '.git' folder, the folder is usually has same name as module
+rm -rf .git/modules/module_folder
+# Step 3: Remove it from the '.gitmodules' file. (This happens automatically now, but still check)
+# Step 4: Add and commit changes
+git commit -am 'Removed submodule <module name>'
+```
