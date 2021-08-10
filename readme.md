@@ -24,6 +24,7 @@ All things git
     - [Restoring an earlier version of a file](#restoring-an-earlier-version-of-a-file)
   - [Sumodules](#sumodules)
     - [Adding a Submodule](#adding-a-submodule)
+    - [Specifying Branch](#specifying-branch)
     - [Updating a Submoudle](#updating-a-submoudle)
     - [Removing a submodule](#removing-a-submodule)
 
@@ -130,14 +131,25 @@ git restore --source=HEAD~2 file.js
 ### Adding a Submodule
 
 ```bash
-git submodule add shh/url-link-to-repo
+git submodule add ssh/url-link-to-repo
+```
+
+### Specifying Branch
+
+You can specify the branch to add and oull from in the `.gitmodules file` by adding the branch as below
+
+```bash
+[submodule "git-notes"]
+	path = git-notes
+	url = git@github.com:SSaquif/git-notes.git
+	branch = main
 ```
 
 ### Updating a Submoudle
 
 You can do update with remote switch
 
-[Why we needd --remote](https://stackoverflow.com/questions/47470271/what-does-remote-actually-do-in-git-submodule-update-remote), if we want to pull master
+[Why we need --remote](https://stackoverflow.com/questions/47470271/what-does-remote-actually-do-in-git-submodule-update-remote), if we want to pull master
 
 ```bash
 git submodule update                                  # Update using the revison being tracked
