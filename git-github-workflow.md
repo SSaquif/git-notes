@@ -1,6 +1,6 @@
 # Git and GitHub
 
-This document outlines how to collaborate with others using git and github.
+This document outlines how to collaborate with others using git and github (or any other similar services).
 
 ## Contents
 
