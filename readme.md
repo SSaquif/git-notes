@@ -10,19 +10,22 @@ All things git
   - [Contents](#contents)
   - [Creating Snapshots](#creating-snapshots)
     - [Initializing a repository](#initializing-a-repository)
-    - [Staging files](#staging-files)
+    - [Staging (Adding) files](#staging-adding-files)
     - [Viewing the status](#viewing-the-status)
     - [Committing the staged files](#committing-the-staged-files)
     - [Skipping the staging area](#skipping-the-staging-area)
     - [Removing files](#removing-files)
     - [Renaming or moving files](#renaming-or-moving-files)
+    - [Pushing to an Remote Repo](#pushing-to-an-remote-repo)
+    - [View List of Remote Repos](#view-list-of-remote-repos)
+    - [Adding & Removing Remote Repos](#adding--removing-remote-repos)
     - [Viewing the staged/unstaged changes](#viewing-the-stagedunstaged-changes)
     - [Viewing the history](#viewing-the-history)
     - [Viewing a commit](#viewing-a-commit)
     - [Unstaging files (undoing git add)](#unstaging-files-undoing-git-add)
     - [Discarding local changes](#discarding-local-changes)
     - [Restoring an earlier version of a file](#restoring-an-earlier-version-of-a-file)
-  - [Sumodules](#sumodules)
+  - [Git Submodules](#git-submodules)
     - [Adding a Submodule](#adding-a-submodule)
     - [Specifying Branch](#specifying-branch)
     - [Updating a Submoudle](#updating-a-submoudle)
@@ -38,7 +41,7 @@ All things git
 git init
 ```
 
-### Staging files
+### Staging (Adding) files
 
 ```bash
 git add file1.js           # Stages a single file
@@ -46,6 +49,8 @@ git add file1.js file2.js  # Stages multiple files
 git add \*.js              # Stages with a pattern
 git add .                  # Stages the current directory
 ```
+
+Alternatively on VSCode you can use the `+` symbol in the source control file to add files to the staging area
 
 ### Viewing the status
 
@@ -61,10 +66,12 @@ git commit -m “Message”    # Commits with a one-line message
 git commit                 # Opens the default editor to type msg
 ```
 
+Alternatively on VSCode you can write the commit message, in the commit message text box at the top and click the tick icon
+
 ### Skipping the staging area
 
 ```bash
-git commit -am “Message”
+git commit -am “Message”  # add + commit all changed files
 ```
 
 ### Removing files
@@ -78,6 +85,34 @@ git rm --cached file1.js  # Removes from staging area only
 
 ```bash
 git mv file1.js file1.txt
+```
+
+### Pushing to an Remote Repo
+
+```bash
+git push <remote-name> <branch-to-push>
+# example
+git push origin master
+```
+
+You can also push from VSCode Source Control tab. Click on the `...` icon and then select `push`
+
+### View List of Remote Repos
+
+```bash
+git remote -v
+```
+
+### Adding & Removing Remote Repos
+
+```bash
+git remote add <remote-name> <repo-url> # add
+# example
+git remote add origin <url u got from github, gitlab etc>
+
+git remote rm <remote-name> # remove
+# example
+git remote rm origin
 ```
 
 ### Viewing the staged/unstaged changes
@@ -126,17 +161,17 @@ git clean -fd                  # Removes all untracked files
 git restore --source=HEAD~2 file.js
 ```
 
-## Sumodules
+## Git Submodules
 
 ### Adding a Submodule
 
 ```bash
-git submodule add ssh/url-link-to-repo
+git submodule add <ssh/url-link-to-repo>
 ```
 
 ### Specifying Branch
 
-You can specify the branch to add and oull from in the `.gitmodules file` by adding the branch as below
+You can specify the branch to add and pull from in the `.gitmodules file` by adding the branch as below
 
 ```bash
 [submodule "git-notes"]
