@@ -10,9 +10,9 @@ All things git
   - [Contents](#contents)
   - [Creating Snapshots](#creating-snapshots)
     - [Initializing a repository](#initializing-a-repository)
-    - [Staging (Adding) files](#staging-adding-files)
     - [Viewing the status](#viewing-the-status)
-    - [Committing the staged files](#committing-the-staged-files)
+    - [Staging (Adding) files](#staging-adding-files)
+    - [Committing the Staged Files](#committing-the-staged-files)
     - [Skipping the staging area](#skipping-the-staging-area)
     - [Removing files](#removing-files)
     - [Renaming or moving files](#renaming-or-moving-files)
@@ -41,6 +41,13 @@ All things git
 git init
 ```
 
+### Viewing the status
+
+```bash
+git status
+git status -s # Short status
+```
+
 ### Staging (Adding) files
 
 ```bash
@@ -50,23 +57,16 @@ git add \*.js              # Stages with a pattern
 git add .                  # Stages the current directory
 ```
 
-Alternatively on VSCode you can use the `+` symbol in the source control file to add files to the staging area
+Alternatively on VSCode you can use the `+` symbol in the source control tab to add files to the staging area
 
-### Viewing the status
-
-```bash
-git status
-git status -s # Short status
-```
-
-### Committing the staged files
+### Committing the Staged Files
 
 ```bash
 git commit -m “Message”    # Commits with a one-line message
 git commit                 # Opens the default editor to type msg
 ```
 
-Alternatively on VSCode you can write the commit message, in the commit message text box at the top and click the tick icon
+Alternatively you can write the commit message on VSCode. Go to the source control tab, then in the commit message text box (at the top) write your message and click the tick icon
 
 ### Skipping the staging area
 
