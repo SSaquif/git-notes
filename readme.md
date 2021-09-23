@@ -25,6 +25,7 @@ All things git
     - [Unstaging files (undoing git add)](#unstaging-files-undoing-git-add)
     - [Discarding local changes](#discarding-local-changes)
     - [Restoring an earlier version of a file](#restoring-an-earlier-version-of-a-file)
+    - [Reverting Commits](#reverting-commits)
   - [Git Submodules](#git-submodules)
     - [Adding a Submodule](#adding-a-submodule)
     - [Specifying Branch](#specifying-branch)
@@ -159,6 +160,23 @@ git clean -fd                  # Removes all untracked files
 
 ```bash
 git restore --source=HEAD~2 file.js
+```
+
+### Reverting Commits
+
+[Stacko](https://stackoverflow.com/questions/23227927/how-do-i-move-master-back-several-commits-in-git)
+
+In order to do it locally, you can do the following commands to go to master and move it to the old commit.
+
+```bash
+git checkout master
+git reset --hard <old_commit_id>
+```
+
+If you then want to push it to the remote, you need to use the -f option.
+
+```bash
+git push -f origin master
 ```
 
 ## Git Submodules
