@@ -185,6 +185,8 @@ git push -f origin master
 
 ```bash
 git submodule add <ssh/url-link-to-repo>
+# add into a nested folde
+git submodule add <path_to_local_folder>/<ssh/url-link-to-repo>
 ```
 
 ### Specifying Branch
