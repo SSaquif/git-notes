@@ -159,11 +159,19 @@ See below for when you have conflicts
 
 ## Step 4-B: Dont Do anything on Github
 
-Now if you want you can check out conflicts directly on github and resolve them right there. But you shouldn't. Higher chance of mistakes and better to do it from VSCode. So instead, go to next step.
+The B steps are when you have conflicts
+
+4-B is when you see `merge conflict` appear on your pull request (step 4-B is not in the diagram)
+
+Now if you want, you can check out conflicts directly on github and resolve them right there. `BUT you shouldn't & DON'T`.
+
+There are higher chances of mistakes being made and better to do it from VSCode. So instead, go to next step.
 
 ## Step 5-B: Update Local master
 
 This step is similar to Step 5-A. We have to update our local master.
+
+So switch to your local master and update it.
 
 ```bash
 # switch to master
@@ -176,7 +184,7 @@ git pull origin master
 
 ## Step 6-B: Update Issue branch
 
-1. Switch over to our Issue branch
+1. Next, Switch over to our Issue branch
 2. Next we want to merge our local issue branch with our newly updated local master branch
 
 ```bash
@@ -189,7 +197,15 @@ git merge master
 
 ## Step 7-B: Resolve Merge Conflicts
 
-Once you merge, merge conflicts will appear on files that have conflict. Go over and resolve them. Sometimes might be worthwhile to team up with a teammate to resolve the conflicts, especially if you are unsure of anything.
+Once you merge, `merge conflicts` will appear on files that have conflict. Go over and resolve them. VSCode should highlight them. Also give you options on how to resolve them. Typically you have 3 options to choose from
+
+1. Keep incoming changes
+2. Keep your changes
+3. Keep both
+
+Sometimes might be worthwhile to team up with a teammate to resolve the conflicts, especially if you are unsure of anything.
+
+Make sure everything runs as expected after resolving the conflicts. (Check browser and server for errors)
 
 Once you have resolved the conflicts dont forget to add and commit the code.
 
@@ -217,4 +233,4 @@ The existing one will have the updated code. Review and accept the PR.
 
 ## Step 10: Start working on next feature on new branch
 
-> Repeat, follow golden rule. Make new branch
+> Repeat, follow `golden rule`. Make new branch for new feature
