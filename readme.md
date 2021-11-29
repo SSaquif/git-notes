@@ -2,6 +2,14 @@
 
 All things git
 
+This is a work in progress
+
+TODO (incomplete list):
+
+1. Basics of branches, (check the workflow for now)
+2. Git rebase
+3. Git hooks
+
 ## Contents
 
 <!-- toc -->
